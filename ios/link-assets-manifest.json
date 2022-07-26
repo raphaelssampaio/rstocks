@@ -1,0 +1,53 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/EudoxusSans-Bold.ttf",
+      "sha1": "a2fa2d03e581b0f59a7c68692ca479e8cb326dd0"
+    },
+    {
+      "path": "assets/fonts/EudoxusSans-ExtraBold.ttf",
+      "sha1": "66ed45040973a7bbde604e7f1e3e76b59737de78"
+    },
+    {
+      "path": "assets/fonts/EudoxusSans-ExtraLight.ttf",
+      "sha1": "88d45c7931d83c72defaa28c8656c7cc64b31f10"
+    },
+    {
+      "path": "assets/fonts/EudoxusSans-Light.ttf",
+      "sha1": "d2f7b9099fcffd4a8cffb49e02ee150b65f0467f"
+    },
+    {
+      "path": "assets/fonts/EudoxusSans-Medium.ttf",
+      "sha1": "a0f565612395d2c298d6bd5c40705fd661fbd311"
+    },
+    {
+      "path": "assets/fonts/EudoxusSans-Regular.ttf",
+      "sha1": "81259038e37ba427c14927296d354208d8c4cbbf"
+    },
+    {
+      "path": "assets/fonts/Kodchasan-Bold.ttf",
+      "sha1": "a37a242804bec9ac6ad05a28f133379c6aa59338"
+    },
+    {
+      "path": "assets/fonts/Kodchasan-Italic.ttf",
+      "sha1": "d36079bc354c00f989486ea8e57b74790865087f"
+    },
+    {
+      "path": "assets/fonts/Kodchasan-Light.ttf",
+      "sha1": "50e6bc5fedadfc347615310f984276c1b942b39c"
+    },
+    {
+      "path": "assets/fonts/Kodchasan-Medium.ttf",
+      "sha1": "67b436032eb8a65519202a32fd570622e7d498eb"
+    },
+    {
+      "path": "assets/fonts/Kodchasan-Regular.ttf",
+      "sha1": "78777899c993e502ca34735863e1f4f76207ff5a"
+    },
+    {
+      "path": "assets/fonts/Kodchasan-SemiBold.ttf",
+      "sha1": "d6280f65e6c515b6049d079cbea8b3a1fcda1847"
+    }
+  ]
+}
