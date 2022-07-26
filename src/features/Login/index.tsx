@@ -42,7 +42,7 @@ export default function Login() {
         <View style={styles.screensContainer}>
           <View style={styles.insideView}>
             <SmallIcon />
-            <Text style={styles.iconTitle}>RStock</Text>
+            <Text style={styles.iconTitle}>RStocks</Text>
           </View>
           <View style={styles.content}>
             <Title

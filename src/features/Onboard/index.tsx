@@ -5,6 +5,8 @@ import AppButton from '@components/Button'
 import RedButton from '@components/RedButton'
 import Onboard1 from '@assets/onboard1'
 import Onboard2 from '@assets/onboard2'
+import NavigationService from '@router/NavigationService'
+import { LoginRouteNames } from '@router/routeNames'
 
 export default function Onboard() {
   const [screen, setScreen] = React.useState(1)
@@ -12,7 +14,9 @@ export default function Onboard() {
   const handleScreen = () => {
     if (screen === 1) {
       setScreen(2)
+      return
     }
+    NavigationService.navigate(LoginRouteNames.LOGIN_SCREEN)
   }
 
   return (
