@@ -22,5 +22,8 @@ export default StyleSheet.create({
   insideView: {
     flexDirection: 'row',
     marginVertical: 35
+  },
+  iconMargin: {
+    marginRight: 20
   }
 })

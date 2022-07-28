@@ -1,5 +1,5 @@
-import React from 'react'
-import { StatusBar, Text, View } from 'react-native'
+import React, { useEffect } from 'react'
+import { Keyboard, StatusBar, Text, View } from 'react-native'
 import SafeKeyboardScrollContainer from '@components/SafeKeyBoardScrollContainer'
 import SmallIcon from '@assets/smallIcon'
 import Title from '@components/Title'
@@ -23,13 +23,25 @@ interface ILoginForm {
 
 export default function Login() {
   const [show, setShow] = React.useState(false)
+  const [keyboardIsOpen, setKeyboardIsOpen] = React.useState(false)
   const {
     control,
     formState: { errors },
   } = useForm<ILoginForm>({
     resolver: yupResolver(schemaLogin),
-    mode: 'onChange',
+    mode: 'onSubmit',
   })
+
+  useEffect(() => {
+    const keyboardDidShow = () => setKeyboardIsOpen(true)
+    const keyboardDidHide = () => setKeyboardIsOpen(false)
+    const showSubscription = Keyboard.addListener('keyboardDidShow', keyboardDidShow)
+    const hideSubscription = Keyboard.addListener('keyboardDidHide', keyboardDidHide)
+    return () => {
+      showSubscription.remove()
+      hideSubscription.remove()
+    }
+  }, [])
 
   return (
     <SafeKeyboardScrollContainer>
@@ -68,13 +80,15 @@ export default function Login() {
               error={errors.password}
             />
           </View>
-          <AppButton
-            title='Login'
-            onPress={() => { }}
-          />
-          <SignUpComponent
-            onPress={() => NavigationService.navigate(OnboardRouteNames.SIGN_UP)}
-          />
+          {!keyboardIsOpen && (
+            <>
+              <AppButton
+                title='Login'
+                onPress={() => { }}
+              />
+              <SignUpComponent onPress={() => NavigationService.navigate(OnboardRouteNames.SIGN_UP)} />
+            </>
+          )}
         </View>
       </View>
     </SafeKeyboardScrollContainer>
