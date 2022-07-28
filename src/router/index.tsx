@@ -3,10 +3,11 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { RootStackParamList, RouteType, RouteTypeProps } from './types'
 import { LoginRouteNames, OnboardRouteNames } from './routeNames'
-import Splash from '@features/Splash'
-import Onboard from '@features/Onboard'
-import Login from '@features/Login'
-import SignUp from '@features/SignUp'
+import Splash from '@screens/Splash'
+import Onboard from '@screens/Onboard'
+import Login from '@screens/Login'
+import SignUp from '@screens/SignUp'
+import Secure from '@screens/Secure'
 import { navigationRef } from './NavigationService'
 
 
@@ -22,7 +23,8 @@ const loginStack: RouteType<RouteTypeProps>[] = [
 
 const onboardStack: RouteType<RouteTypeProps>[] = [
   { name: OnboardRouteNames.ONBOARD_SCREEN, component: Onboard, options: noHeader },
-  { name: OnboardRouteNames.SIGN_UP, component: SignUp, options: noHeader }
+  { name: OnboardRouteNames.SIGN_UP, component: SignUp, options: noHeader },
+  { name: OnboardRouteNames.SECURE_SCREEN, component: Secure, options: noHeader },
 ]
 
 const generateStack = (stackArray: RouteType<RouteTypeProps>[]) => (
@@ -34,7 +36,7 @@ const generateStack = (stackArray: RouteType<RouteTypeProps>[]) => (
 export default function Router() {
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName={OnboardRouteNames.SIGN_UP}>
+      <Stack.Navigator initialRouteName={OnboardRouteNames.SECURE_SCREEN}>
         {generateStack(loginStack)}
         {generateStack(onboardStack)}
       </Stack.Navigator>
