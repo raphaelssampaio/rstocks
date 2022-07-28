@@ -40,7 +40,7 @@ const generateStack = (stackArray: RouteType<RouteTypeProps>[]) => (
 export default function Router() {
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName={OnboardRouteNames.CODE_SCREEN}>
+      <Stack.Navigator initialRouteName={LoginRouteNames.SPLASH_SCREEN}>
         {generateStack(loginStack)}
         {generateStack(onboardStack)}
       </Stack.Navigator>

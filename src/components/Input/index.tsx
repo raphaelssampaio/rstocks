@@ -41,8 +41,8 @@ export function Input({
           fontWeight='400'
           height={16}
           marginBottom={6}
-          {...rest}
           autoCapitalize='none'
+          {...rest}
         />
       }}
     />

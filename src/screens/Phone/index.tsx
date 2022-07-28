@@ -4,10 +4,10 @@ import SafeKeyboardScrollContainer from '@components/SafeKeyBoardScrollContainer
 import Title from '@components/Title'
 import AppButton from '@components/Button'
 import styles from './styles'
-import { Input } from '@components/Input'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { schemaPhone } from './phoneValidation'
+import InputSelect from '@components/InputSelect'
 
 interface IPhoneForm {
   phone: string
@@ -48,7 +48,7 @@ export default function Phone() {
               title={`Set up 2-step verification`}
               text={`Enter your phone number so we can text you an authentication code`}
             />
-            <Input
+            <InputSelect
               control={control}
               name='phone'
               error={errors.phone}
