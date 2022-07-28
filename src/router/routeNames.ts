@@ -7,5 +7,7 @@ export enum LoginRouteNames {
 export enum OnboardRouteNames {
   ONBOARD_SCREEN = 'Onboard',
   SIGN_UP = 'SignUp',
-  SECURE_SCREEN = 'Secure'
+  SECURE_SCREEN = 'Secure',
+  PHONE_SCREEN = 'Phone',
+  CODE_SCREEN = 'Code'
 }

@@ -9,6 +9,8 @@ import Login from '@screens/Login'
 import SignUp from '@screens/SignUp'
 import Secure from '@screens/Secure'
 import { navigationRef } from './NavigationService'
+import Phone from '@screens/Phone'
+import Code from '@screens/Code'
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>()
@@ -25,6 +27,8 @@ const onboardStack: RouteType<RouteTypeProps>[] = [
   { name: OnboardRouteNames.ONBOARD_SCREEN, component: Onboard, options: noHeader },
   { name: OnboardRouteNames.SIGN_UP, component: SignUp, options: noHeader },
   { name: OnboardRouteNames.SECURE_SCREEN, component: Secure, options: noHeader },
+  { name: OnboardRouteNames.PHONE_SCREEN, component: Phone, options: noHeader },
+  { name: OnboardRouteNames.CODE_SCREEN, component: Code, options: noHeader },
 ]
 
 const generateStack = (stackArray: RouteType<RouteTypeProps>[]) => (
@@ -36,7 +40,7 @@ const generateStack = (stackArray: RouteType<RouteTypeProps>[]) => (
 export default function Router() {
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName={OnboardRouteNames.SECURE_SCREEN}>
+      <Stack.Navigator initialRouteName={OnboardRouteNames.CODE_SCREEN}>
         {generateStack(loginStack)}
         {generateStack(onboardStack)}
       </Stack.Navigator>

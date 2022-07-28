@@ -18,5 +18,12 @@ export default StyleSheet.create({
     lineHeight: 24,
     fontWeight: '400',
     color: '#8198A5',
+  },
+  phone: {
+    fontFamily: 'EudoxusSans-Regular',
+    fontSize: 14,
+    lineHeight: 24,
+    fontWeight: '400',
+    color: '#F61C7A'
   }
 })

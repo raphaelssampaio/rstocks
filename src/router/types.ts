@@ -6,6 +6,8 @@ export type RootStackParamList = {
   Login: undefined
   SignUp: undefined
   Secure: undefined
+  Phone: undefined
+  Code: undefined
 }
 
 export interface RouteType<Props> {
